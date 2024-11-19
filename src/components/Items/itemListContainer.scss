@@ -1,0 +1,30 @@
+/** @format */
+
+.itemListContainer-container {
+   height: 100%;
+   padding: 0 2rem;
+   background: #cacaca;
+   width: auto;
+   text-align: center;
+  
+
+   .itemListContainer-flex {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      
+      .itemListContainer-tittle {
+          padding: 50px 0;
+          text-transform: uppercase;
+        
+      }
+
+      .itemListContainer-products {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         flex-wrap: wrap;
+      
+      }
+   }
+}

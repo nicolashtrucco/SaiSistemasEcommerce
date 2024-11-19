@@ -1,0 +1,59 @@
+.header-container {
+
+    
+    .header-slogan {
+
+        height: 60vh;
+    
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: -1;
+        text-align: center;
+        align-items: center;
+    
+        div {
+            padding: 1rem;
+            width: 1000px;
+            h1 {
+                font-size: 3rem;
+            }
+            
+        }
+        
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header-container {
+
+        .header-slogan {
+            height: 35vh;
+    
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: -1;
+        text-align: center;
+        align-items: center;
+    
+        
+            div {
+               width: 650px;
+                padding: 1rem;
+                text-align: center;
+
+                h1 {
+                    font-size: 1.7rem;
+                }
+                
+            }
+        }
+    }
+}
+

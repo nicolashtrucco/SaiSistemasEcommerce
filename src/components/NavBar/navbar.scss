@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 2rem;
+
+    img {
+        height: 70px;
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            
+            margin: 0 1.5rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.25rem;
+            align-items: center;
+            transition: all 0.5s;
+            font-weight: bold;
+            &:hover {
+                color: orange;
+            }
+
+        }
+        .navbar-buttonClose {
+            font-size: 1.7rem;
+        }
+
+        // input {
+        //     border: none;
+        //     padding: 3px 25px 3px 5px;
+        //     border-radius: 5px;
+        //     font-size: 1rem;
+        // }
+
+    }
+
+    .navbar-cartButton {
+        display: flex;
+        padding-right: 15px;
+     
+    }
+}
+
+
+.navbar-button {
+    padding: 5px; 
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+
+
+
+.main-container {
+    top: 5rem;
+    height: 100px;
+    background-color: aqua;
+}
+
+@media screen and (max-width: 1024px) {
+    body { 
+
+        header {
+           
+           nav {
+               position: fixed;
+               top: 0;
+               left: 0;
+               height: 100%;
+               width: 100%;
+               align-items: center;
+               justify-content: center;
+               gap: 1.5rem;
+               background-color: #000000;
+               transition: 1s;
+               transform: translateY(-100vh);
+               flex-direction: column;
+   
+   
+            }
+            .navbar-buttonClose {
+                position: absolute;
+                top: 1.9rem;
+                right: 3.5rem;
+            }
+   
+           
+           .navbar-button {
+               visibility: visible;
+               opacity: 1;
+   
+           } 
+           .responsive-nav {
+               transform: none;
+           }
+   
+           .navbar-cartButton {
+               display: flex;
+               justify-content: center;
+              button {
+               margin: 10px 15px 0 30px;
+              }
+           }
+        }
+        .navbar-slogan {
+         color: #FFFFFF;
+         position: fixed;
+         display: flex;
+         justify-content: center;
+         width: 100%;
+         top: 20rem;
+         z-index: -1;
+     
+         div {
+            width: 450px;
+             padding: 1rem;
+             text-align: center;
+             h1 {
+                 font-size: 1.75rem;
+             }
+             
+         }
+     }
+   }
+
+}

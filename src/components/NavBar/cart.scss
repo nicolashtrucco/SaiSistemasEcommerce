@@ -1,0 +1,16 @@
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin-right: 6%;
+    .cart-icon {
+        color: #FFFFFF;
+        font-size: 37px;
+
+    }
+    .cart-counter {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
