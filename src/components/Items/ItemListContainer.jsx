@@ -17,7 +17,7 @@ const ItemListContainer = () => {
             <h1 className="itemListContainer-tittle">Productos Destacados</h1>
             <div className="itemListContainer-products">
                {loading === true ? (
-                  <BeatLoader color={"orange"} size={30} />
+                  <BeatLoader className="itemListContainer-loading" color={"orange"} size={30} />
                ) : (
                   <ItemList filteredProducts={filteredProducts} />
                )}

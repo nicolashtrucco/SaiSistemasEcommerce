@@ -27,8 +27,13 @@
 
          .itemListContainer-ups {
             font-weight: bold;
-            font-size: 25px;
+            font-size: 2px;
+            height: 50%;
+         }
+
+         .itemListContainer-loading {
             height: 15vh;
+            margin: 40px 0 100% 0;
          }
       
       }

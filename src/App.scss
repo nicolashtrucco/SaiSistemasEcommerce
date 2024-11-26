@@ -28,7 +28,8 @@ body {
     
   }
 
-  @media screen and (max-width: 1024px){
-    background-size: 100vh;
+  @media screen and (max-width: 1000px){
+    background-size:auto;
+    background-position: top;
   }
 }

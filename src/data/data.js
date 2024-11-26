@@ -53,9 +53,9 @@ const data = [
 
 const getProducts = () => {
    return new Promise((resolve, reject) => {
-      // setTimeout(()=> {
+      setTimeout(()=> {
          resolve(data);
-      // }, 1500)
+      }, 1500)
       
    });
 };

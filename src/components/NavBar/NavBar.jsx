@@ -25,9 +25,9 @@ const handleShowNavBar = () => {
             </Link>
 
             <nav className="navbar" ref={navRef}>
-              <Link to={'/productos'}>Productos</Link>
-              <Link to={'/contacto'}>Contacto</Link>
-              <Link to={'/nosotros'}>Nosotros</Link>
+              <Link to={'/productos'} onClick={handleShowNavBar}>Productos</Link>
+              <Link to={'/contacto'}onClick={handleShowNavBar}>Contacto</Link>
+              <Link to={'/nosotros'}onClick={handleShowNavBar}>Nosotros</Link>
               {/* <input placeholder="Buscar" className="navbar-search" /> */}
 
               <button className="navbar-button navbar-buttonClose" onClick={handleShowNavBar}><FaTimes/></button>
