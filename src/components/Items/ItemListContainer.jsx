@@ -1,4 +1,5 @@
 /** @format */
+// ItemListContainer.jsx
 import useProducts from "../CustomHooks/useProducts.jsx";
 import "../Items/itemListContainer.scss";
 import ItemList from "./ItemList.jsx";
@@ -6,6 +7,9 @@ import { BeatLoader } from "react-spinners";
 
 const ItemListContainer = () => {
    const { products, loading } = useProducts();
+
+   
+   const filteredProducts = products.slice(0, 3);
 
    return (
       <div className="itemListContainer-container">
@@ -15,7 +19,7 @@ const ItemListContainer = () => {
                {loading === true ? (
                   <BeatLoader color={"orange"} size={30} />
                ) : (
-                  <ItemList products={products.slice(0, 3)} />
+                  <ItemList filteredProducts={filteredProducts} />
                )}
             </div>
          </div>
