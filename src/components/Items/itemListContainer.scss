@@ -14,16 +14,22 @@
       text-align: center;
       
       .itemListContainer-tittle {
-          padding: 50px 0;
-          text-transform: uppercase;
-        
+         padding: 50px 0;
+         text-transform: uppercase;
+         
       }
-
+      
       .itemListContainer-products {
          display: flex;
          flex-direction: row;
          justify-content: center;
          flex-wrap: wrap;
+
+         .itemListContainer-ups {
+            font-weight: bold;
+            font-size: 25px;
+            height: 15vh;
+         }
       
       }
    }

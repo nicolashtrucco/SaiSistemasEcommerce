@@ -22,7 +22,7 @@ const ProductosItemListContainer = () => {
     }, []);
 
     const filteredProducts = products.filter((product)=>(
-      product.nameProduct.toLowerCase().includes(query)
+      product.nameProduct.toLowerCase().includes(query) || product.category.toLowerCase().includes(query)
     ))
  
     return (
@@ -30,7 +30,10 @@ const ProductosItemListContainer = () => {
           <div className="itemListContainer-flex">
              <h1 className="itemListContainer-tittle"><ProductosCategory setQuery={setQuery} query={query}/></h1>
              <div className="itemListContainer-products">
-                <ItemList filteredProducts={filteredProducts}/>
+               {filteredProducts.length > 0 ? (
+                  <ItemList filteredProducts={filteredProducts}/>
+                  
+               ) : (<p className="itemListContainer-ups"> Lo sentimos, no se encontraron productos que coincidan con tu búsqueda.</p>)}
              </div>
           </div>
        </div>
