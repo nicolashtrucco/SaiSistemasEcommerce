@@ -1,31 +1,22 @@
 /** @format */
-
+import useProducts from "../CustomHooks/useProducts.jsx";
 import "../Items/itemListContainer.scss";
-import { getProducts } from "../../data/data.js";
-import { useState, useEffect } from "react";
 import ItemList from "./ItemList.jsx";
-const ItemListContainer = ( ) => {
-   const [products, setProducts] = useState([]);
+import { BeatLoader } from "react-spinners";
 
-   useEffect(() => {
-      getProducts()
-         .then((data) => {
-            setProducts(data);
-         })
-         .catch((error) => {
-            console.log(error);
-         })
-         .finally(() => {
-            console.log("Finish");
-         });
-   }, []);
+const ItemListContainer = () => {
+   const { products, loading } = useProducts();
 
    return (
       <div className="itemListContainer-container">
          <div className="itemListContainer-flex">
             <h1 className="itemListContainer-tittle">Productos Destacados</h1>
             <div className="itemListContainer-products">
-               <ItemList products={products.slice(0, 3)} />
+               {loading === true ? (
+                  <BeatLoader color={"orange"} size={30} />
+               ) : (
+                  <ItemList products={products.slice(0, 3)} />
+               )}
             </div>
          </div>
       </div>
